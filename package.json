@@ -1,0 +1,29 @@
+{
+  "name": "niles-validator",
+  "version": "1.0.0",
+  "description": "Validates IDs, URLs and Timezones for Niles",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "discord.js": "^12.5.1",
+    "luxon": "^1.25.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niles-bot/niles-validator.git"
+  },
+  "keywords": [
+    "niles-bot",
+    "validator"
+  ],
+  "author": "Michael Chang <michael@mchang.name>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niles-bot/niles-validator/issues"
+  },
+  "homepage": "https://github.com/niles-bot/niles-validator#readme"
+}
