@@ -53,12 +53,11 @@ client.on('ready', () => {
 client.login(process.env.TOKEN) // login
 
 client.on('message', message => {
-  const prefix = process.env.PREFIX // set prefix
-  if (!message.author.bot && message.content.startsWith(prefix)) { // check if sent by self & check for prefix
-    const args = message.content.slice(prefix.length).trim().split(' ');
+  if (!message.author.bot && message.channel.type === "dm") { // check if sent by self & only over DMs
+    const args = message.content.trim().split(' ');
     const command = args.shift().toLowerCase();
     if (command === 'help') {
-        message.channel.send('Valid Commands: `url/ tz/ calendar/ help`')
+        message.channel.send('Valid Commands: `url/u, tz/t calendar/cal/c help`')
     } else if (args[0]) {
         if (['calendar', 'cal', 'c'].includes(command)) { // clean url
             message.channel.send(validateCalId(args[0]))
